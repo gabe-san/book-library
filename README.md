@@ -6,7 +6,7 @@ Making a library app that takes user input of Book title, author, number of page
 
 
 
-Use as future project template for ESLint & Prettier. 
+Use as future project template for ESLint & Prettier. Note: make a template repo excluding main.js, index.html, style.css. Run npm install within repo directory locally and you should be good to go.
 
 Setting up prettier
 1) npm install --save-dev --save-exact prettier in the repo you’re working on so on a per project basis
