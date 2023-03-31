@@ -18,7 +18,7 @@
         "no-console": "off",
         "quotes": [
             "error",
-            "single"
+            "double"
         ]
     }
 }
