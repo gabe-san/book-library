@@ -1,0 +1,44 @@
+:root {
+    --darkbackgroundcolor: rgb(18, 18, 18);
+    --darkfooterbackcolor:  rgb(30, 30, 30);
+    --darktextcolor: rgb(255, 255, 255);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: var(--darkbackgroundcolor);
+    color: var(--darktextcolor);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    height: 2.5rem;
+    gap: 5px;
+    background-color: var(--darkfooterbackcolor);
+    font-size: 14px;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: blueviolet;
+}
+a:active {
+    color: purple;
+}
+
