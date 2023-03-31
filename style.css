@@ -1,6 +1,6 @@
 :root {
     --darkbackgroundcolor: rgb(18, 18, 18);
-    --darkfooterbackcolor:  rgb(30, 30, 30);
+    --darkhefooterbackcolor:  rgb(30, 30, 30);
     --darktextcolor: rgb(255, 255, 255);
 }
 * {
@@ -19,6 +19,27 @@ html, body {
     flex-direction: column;
     min-height: 100vh;
 }
+/* Navigation */
+.navbar {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    font-weight: 900;
+    font-size: 36px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px;
+    background-color: var(--darkhefooterbackcolor);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* FOOTER */
@@ -29,7 +50,7 @@ footer {
     margin-top: auto;
     height: 2.5rem;
     gap: 5px;
-    background-color: var(--darkfooterbackcolor);
+    background-color: var(--darkhefooterbackcolor);
     font-size: 14px;
 }
 a {
