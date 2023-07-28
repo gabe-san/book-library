@@ -18,14 +18,27 @@
         </div>
         <div>
             <form action="" method="post">
-                <label for="book_title">Book Title</label>
-                <input type="text" id="book_title" name="book_title" placeholder="Dune...">
+                <div>
+                    <label for="book_title">Book Title</label>
+                    <input type="text" id="book_title" name="book_title" placeholder="Dune...">
+                </div>
 
-                <label for="author_name">Author</label>
-                <input type="text" id="author_name" name="author_name" placeholder="Frank Herbert...">
+                <div>
+                    <label for="author_name">Author</label>
+                    <input type="text" id="author_name" name="author_name" placeholder="Frank Herbert...">
+                </div>
 
-                <label for="page_count">Total Pages</label>
-                <input type="text" id="page_count" name="page_count" placeholder="896...">
+                <div>
+                    <label for="page_count">Total Pages</label>
+                    <input type="number" id="page_count" name="page_count" placeholder="896...">
+
+                <div>
+                    <label for="user_readstatus">Have you finished reading this book?</label>
+                    <input type="checkbox" id="user_readstatus" name="user_readstatus">
+                </div>
+                <button type="reset">Clear inputs</button>
+                <button type="submit">Update Library</button>
+                </div>
             </form>
         </div>
 
