@@ -12,12 +12,37 @@
         <div class="navbar">
             <div>library</div>
         </div>
-        <div class="bookGrid">
-            <div>
-                <button class="addBook">+Add a book</button>
-            </div>
-            <div class="card"></div>
+        <div class="bookGridAdd">
+            <button class="addBook">+Add a book</button>
+            
         </div>
+        <div>
+            <form action="" method="post">
+                <label for="book_title">Book Title</label>
+                <input type="text" id="book_title" name="book_title" placeholder="Dune...">
+
+                <label for="author_name">Author</label>
+                <input type="text" id="author_name" name="author_name" placeholder="Frank Herbert...">
+
+                <label for="page_count">Total Pages</label>
+                <input type="text" id="page_count" name="page_count" placeholder="896...">
+            </form>
+        </div>
+
+        <div class="content-container">
+            <div class="card1"> 
+                <p class="cardtitle">Book title</p>
+                <p class="cardauthor">Author</p>
+                <p class="cardpages">Pages</p>
+                <p class="cardread">Read</p>
+                <div class="cbuttons">
+                    <button class="cbutton1">Read?</button>
+                    <button class="cbutton2">Delete</button>
+                </div>
+            </div>
+
+        </div>
+
         <footer>2023 gabe-san <a href="https://github.com/gabe-san" target="_blank"> GitHub</a></footer>
     </div>
 

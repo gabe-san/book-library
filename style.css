@@ -2,6 +2,8 @@
     --darkbackgroundcolor: rgb(18, 18, 18);
     --darkhefooterbackcolor:  rgb(30, 30, 30);
     --darktextcolor: rgb(255, 255, 255);
+    --cardbackgroundcolor: rgb(50, 52, 66);
+    --cardbackgroundshadow: rgb(247, 90, 38);;
 }
 * {
     box-sizing: border-box;
@@ -31,8 +33,27 @@ html, body {
     background-color: var(--darkhefooterbackcolor);
 }
 
+/* Book Grid */
 
+.bookGridAdd {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(150px, 1fr));
+    grid-template-rows: repeat(autofit, minmax(150px, 1fr));;
+}
 
+div[class^="card"] {
+    border: 2px solid black;
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 25px;
+    background: var(--cardbackgroundcolor);
+    transition: all 0.4s ease-out;
+    position: relative;
+    box-shadow: inset 5px 0.01px var(--cardbackgroundshadow);
+}
 
 
 
