@@ -19,6 +19,8 @@
         "quotes": [
             "error",
             "double"
-        ]
+        ],
+        "no-alert": "off",
+        "no-plusplus": "off"
     }
 }
