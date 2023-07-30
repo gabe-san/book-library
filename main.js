@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable no-restricted-globals */
 const myLibrary = [];
 
@@ -6,8 +7,10 @@ function Books(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
-  // this.info = () => `${title} by ${author}, ${pages} pages, ${read}`;
 }
+Books.prototype.toggleRead = function () {
+  this.read = !this.read;
+};
 
 // Render book info from myLibrary
 function displayLibrary() {
@@ -24,8 +27,8 @@ function displayLibrary() {
       <p>${book.read ? "Read" : "Not Yet Read"}</p>
     </div>
     <div class="cbuttons">
-      <button class="cbutton1">Read?</button>
-      <button class="cbutton2">Delete</button>
+      <button class="cbutton1" onclick="toggleRead(${i})">Toggle Read</button>
+      <button class="cbutton2" onclick="deleteBook(${i})">Delete</button>
     </div>
     `;
     libraryRender.appendChild(bookOne);
@@ -43,6 +46,16 @@ function addBookToLibrary() {
   displayLibrary();
 }
 
+function toggleRead(index) {
+  myLibrary[index].toggleRead();
+  displayLibrary();
+}
+
+function deleteBook(index) {
+  myLibrary.splice(index, 1);
+  displayLibrary();
+}
+
 // show form
 const addBookBtn = document.querySelector("#addBook");
 addBookBtn.addEventListener("click", () => {
@@ -55,7 +68,3 @@ submitBookBtn.addEventListener("submit", () => {
   event.preventDefault();
   addBookToLibrary();
 });
-
-/* work flow:
-5: displayLibrary() to automatically fill new html divs to showcase object contents of myLibrary();
-*/
