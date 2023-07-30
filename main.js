@@ -5,15 +5,31 @@ function Books(title, author, pages, read) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.isRead = read;
+  this.read = read;
   // this.info = () => `${title} by ${author}, ${pages} pages, ${read}`;
 }
 
 // Render book info from myLibrary
 function displayLibrary() {
-  return myLibrary;
-  // for loop myLibrary
-  // if object exists myLibrary, change textContent of html card on page
+  const libraryRender = document.querySelector("#content-container");
+  libraryRender.innerHTML = "";
+  for (let i = 0; i < myLibrary.length; i++) {
+    const book = myLibrary[i];
+    const bookOne = document.createElement("div");
+    bookOne.innerHTML = `
+    <div>
+      <h3> ${book.title}</h3>
+      <h5> ${book.author}</h5>
+      <p>${book.pages} pages</p>
+      <p>${book.read ? "Read" : "Not Yet Read"}</p>
+    </div>
+    <div class="cbuttons">
+      <button class="cbutton1">Read?</button>
+      <button class="cbutton2">Delete</button>
+    </div>
+    `;
+    libraryRender.appendChild(bookOne);
+  }
 }
 
 // function to add Books to myLibrary
@@ -41,6 +57,5 @@ submitBookBtn.addEventListener("submit", () => {
 });
 
 /* work flow:
-3: use addBookToLibrary to store the newly created object in myLibrary[]
 5: displayLibrary() to automatically fill new html divs to showcase object contents of myLibrary();
 */

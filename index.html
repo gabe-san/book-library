@@ -33,7 +33,7 @@
                     <input type="number" id="page-count" name="page-count" placeholder="896...">
                 </div>
                 <div>
-                    <label for="user-readstatus">Have you finished reading this book?</label>
+                    <label for="user-readstatus">Finished Reading?</label>
                     <input type="checkbox" id="user-readstatus" name="user-readstatus">
                 </div>
                 <button type="reset">Clear</button>
@@ -42,18 +42,9 @@
             </form>
         </div>
 
-        <div class="content-container" style="display:none">
-            <div class="card1"> 
-                <p class="cardtitle">Book title</p>
-                <p class="cardauthor">Author</p>
-                <p class="cardpages">Pages</p>
-                <p class="cardread">Read</p>
-                <div class="cbuttons">
-                    <button class="cbutton1">Read?</button>
-                    <button class="cbutton2">Delete</button>
-                </div>
-            </div>
-
+        <div id="content-container">
+        </div>
+           
         </div>
 
         <footer>2023 gabe-san <a href="https://github.com/gabe-san" target="_blank"> GitHub</a></footer>
