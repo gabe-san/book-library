@@ -1,5 +1,6 @@
 # book-library
 
+Link : https://gabe-san.github.io/book-library/
 Making a library app that takes user input of Book title, author, number of pages, and if it has been read completely. _Uses HTML, CSS, JS._
 
 > **Use as future project template for ESLint & Prettier. Note: make a template repo excluding main.js, index.html, style.css. Run npm install within repo directory locally and you should be good to go.**
