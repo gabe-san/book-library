@@ -14,6 +14,8 @@
 html, body {
     background-color: var(--darkbackgroundcolor);
     color: var(--darktextcolor);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 .container {
@@ -33,35 +35,97 @@ html, body {
     background-color: var(--darkhefooterbackcolor);
 }
 
+/* Add Book Button */
+#addBook {
+    display: flex;
+    height: 4rem;
+    width: 8rem;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: rgb(92, 92, 92);
+    border-radius: 3px;
+    color: var(--darktextcolor);
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+#addBook:hover {
+    background-color: rgba(65, 64, 64, 0.181);
+}
+#addBook:active {
+    background-color: rgb(30, 30, 30, .181);
+}
+input {
+    border-radius: 1px;
+    background-color: rgb(18, 18, 18);
+    border: none;
+    color: white;
+    border: 1px solid rgb(229, 231, 235,0.2);
+    width: 300px;
+    padding: 4px;
+}
 /* Book Grid */
 
 .bookGridAdd {
-    display: grid;
-    grid-template-columns: repeat(autofit, minmax(150px, 1fr));
-    grid-template-rows: repeat(autofit, minmax(150px, 1fr));;
+    display: flex;
+    justify-content: center;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+   
+    
+}
+.form-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    gap: 40px;
+    
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
 }
 
-div[class^="card"] {
+.formb {
+    border: none;
+    background-color: rgb(92, 92, 92);
+    color: var(--darktextcolor);
+    padding: 5px;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 3px;
+}
+.formb:hover {
+    background-color: rgba(65, 64, 64, 0.181);
+}
+.formb:active {
+    background-color: rgb(30, 30, 30, .181);
+}
+#content-container {
+    margin-top: 20px;
     border: 2px solid black;
     border-radius: 15px;
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr ;
     padding: 25px;
+    gap: 25px;
     background: var(--cardbackgroundcolor);
-    transition: all 0.4s ease-out;
     position: relative;
     box-shadow: inset 5px 0.01px var(--cardbackgroundshadow);
 }
-
-
-
-
-
-
-
-
+.cbuttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly ;
+    padding: 10px;
+}
 
 /* FOOTER */
 footer {

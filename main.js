@@ -15,7 +15,7 @@ Books.prototype.toggleRead = function () {
 // Render book info from myLibrary
 function displayLibrary() {
   const libraryRender = document.querySelector("#content-container");
-  libraryRender.innerHTML = "";
+  libraryRender.textContent = "";
   for (let i = 0; i < myLibrary.length; i++) {
     const book = myLibrary[i];
     const bookOne = document.createElement("div");
@@ -27,8 +27,8 @@ function displayLibrary() {
       <p>${book.read ? "Read" : "Not Yet Read"}</p>
     </div>
     <div class="cbuttons">
-      <button class="cbutton1" onclick="toggleRead(${i})">Toggle Read</button>
-      <button class="cbutton2" onclick="deleteBook(${i})">Delete</button>
+      <button class="formb" onclick="toggleRead(${i})">Toggle Read</button>
+      <button class="formb" onclick="deleteBook(${i})">Delete</button>
     </div>
     `;
     libraryRender.appendChild(bookOne);
@@ -46,11 +46,13 @@ function addBookToLibrary() {
   displayLibrary();
 }
 
+// eslint-disable-next-line no-unused-vars
 function toggleRead(index) {
   myLibrary[index].toggleRead();
   displayLibrary();
 }
 
+// eslint-disable-next-line no-unused-vars
 function deleteBook(index) {
   myLibrary.splice(index, 1);
   displayLibrary();
@@ -62,6 +64,7 @@ addBookBtn.addEventListener("click", () => {
   const newBookForm = document.querySelector("#newBookForm");
   newBookForm.style.display = "block";
 });
+
 // submit form
 const submitBookBtn = document.querySelector("#newBookForm");
 submitBookBtn.addEventListener("submit", () => {
