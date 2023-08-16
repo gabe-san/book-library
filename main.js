@@ -2,15 +2,18 @@
 /* eslint-disable no-restricted-globals */
 const myLibrary = [];
 
-function Books(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class BookClass {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+
+  toggleRead = () => {
+    this.read = !this.read
+  }
 }
-Books.prototype.toggleRead = function () {
-  this.read = !this.read;
-};
 
 // Render book info from myLibrary
 function displayLibrary() {
@@ -41,7 +44,7 @@ function addBookToLibrary() {
   const author = document.getElementById("author-name").value;
   const pages = document.getElementById("page-count").value;
   const read = document.getElementById("user-readstatus").checked;
-  const newBook = new Books(title, author, pages, read);
+  const newBook = new BookClass(title, author, pages, read);
   myLibrary.push(newBook);
   displayLibrary();
 }
@@ -71,3 +74,4 @@ submitBookBtn.addEventListener("submit", () => {
   event.preventDefault();
   addBookToLibrary();
 });
+
